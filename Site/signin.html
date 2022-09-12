@@ -1,6 +1,10 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Вход</title>
 <style>
 body
 {
@@ -109,8 +113,6 @@ a {
 }
 
 </style>
-</head>
-        </style>
     </head>
 
     <body>
@@ -120,13 +122,30 @@ a {
               <hr>
 
               <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
+              <input type="text" class = "email" placeholder="Enter Email" name="email" required>
           
               <label for="psw"><b>Пароль</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <input type="password" class = "psw" placeholder="Enter Password" name="psw" required>
           
               <!-- <button type="submit" class="registerbtn">Sign up</button> -->
-              <button type="submit" class="loginbtn">Войти</button>
+              <a href='account.html'><button type="submit" class="loginbtn">Войти</button></a>
+
+              <script src="script.js">
+                // function opnAc() {
+                //     document.location.href='account.html';
+                // }
+                // email = document.querySelector('.email');
+                // psw = document.querySelector('.psw');
+                // btn = document.querySelector('.btn');
+                // btn.setAttrebute('disable', true);
+                // inp.oninput = function() {
+                //     if(psw.value.length < 5) {
+                //         btn.setAttrebute('disable', true);
+                //     } else {
+                //         btn.removeAttrebute('disable');
+                //     }
+                // }
+              </script>
 
               <p>У вас ещё нет аккаунта? <a href="signup.html">Регистрация</a>.</p>
             </div>
