@@ -36,7 +36,7 @@ body
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=email], input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -46,7 +46,7 @@ input[type=text], input[type=password] {
     border-radius: 25px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=email]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -112,11 +112,11 @@ a {
             <hr>
 
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-        
+            <input type="email" placeholder="Enter Email" name="email" required>
+            <br>
             <label for="psw"><b>Пароль</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
-        
+            <br>
             <label for="psw-repeat"><b>Повторите пароль</b></label>
             <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
         
