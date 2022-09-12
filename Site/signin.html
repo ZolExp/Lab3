@@ -36,16 +36,17 @@ body
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=email], input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
     background: #f1f1f1;
+    border-radius: 25px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=email]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -66,30 +67,18 @@ hr {
 }
 
 /* Set a style for the submit button */
-
 .container form{
     padding: 0 40px;
     box-sizing: border-box;
 }
 
-.registerbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 49%;
-    opacity: 0.9;
-    border-radius: 25px;
-}
-
-
 .loginbtn {
     background-color: #4CAF50;
     color: white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
     padding: 16px 20px;
-    margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 49%;
@@ -116,24 +105,40 @@ a {
     </head>
 
     <body>
-        <form action="page.php">
-            <div class="container">
-              <h1>Вход</h1>
-              <hr>
+        <div class="container">
+            <h1>Вход</h1>
+            <hr>
 
-              <label for="email"><b>Email</b></label>
-              <input type="text" class = "email" placeholder="Enter Email" name="email" required>
-          
-              <label for="psw"><b>Пароль</b></label>
-              <input type="password" class = "psw" placeholder="Enter Password" name="psw" required>
-          
-              <!-- <button type="submit" class="registerbtn">Sign up</button> -->
-              <a href='account.html'><button type="submit" class="loginbtn">Войти</button></a>
+            <form action="account.html">
+                <label for="email"><b>Email</b></label>
+                <input type="email" class = "email" placeholder="Введите Email" name="email" required>
+                <br>
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" class = "psw" placeholder="Введите пароль" name="psw" required>
 
-              <script src="script.js">
-                // function opnAc() {
-                //     document.location.href='account.html';
-                // }
+                <button type="submit" class="loginbtn" onclick="transfer();return false">Войти</button>
+
+                <script>
+                    // function transfer(){
+                    //     var a = forma
+                    // }
+                </script>
+
+                <!-- <script src="script.js">
+                    function opnAc() {
+                        document.location.href='account.html';
+                    }
+                </script> -->
+
+                <p>У вас ещё нет аккаунта? <a href="signup.html">Регистрация</a>.</p>
+            </form>
+
+            <!-- <button type="submit" class="registerbtn">Sign up</button> -->
+
+            <!-- <script src="script.js">
+                function opnAc() {
+                    document.location.href='account.html';
+                }
                 // email = document.querySelector('.email');
                 // psw = document.querySelector('.psw');
                 // btn = document.querySelector('.btn');
@@ -144,17 +149,10 @@ a {
                 //     } else {
                 //         btn.removeAttrebute('disable');
                 //     }
-                // }
-              </script>
+                //}
+            </script> -->
 
-              <p>У вас ещё нет аккаунта? <a href="signup.html">Регистрация</a>.</p>
-            </div>
-            
-            <div class="container signin">
-              
-            </div>
-            
-        </form>
+          
+        </div>
     </body>
-
 </html>
