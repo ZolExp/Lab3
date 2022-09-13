@@ -1,0 +1,184 @@
+body
+{
+    background-color: rgb(255, 255, 255);
+}
+
+.topbar {
+    background-color: blueviolet;
+    /* position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 105%;
+    height: 50px; */
+}
+
+
+
+
+
+
+
+/* задаем цвет фона для контейнера nav. */
+nav {
+    margin: 0px 0;
+    background-color: #ffffff;
+}
+
+/* убираем отступы и поля, а также list-style для "ul", и добавляем "position:relative" */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    /* right: -60%; */
+}
+
+/* применяем inline-block позиционирование к элементам навигации */
+nav ul li {
+    margin: 0px -7px 0 0;
+    display:inline-block;
+    background-color: #ffffff;
+}
+
+/* стилизуем ссылки */
+nav a {
+    display:block;
+    padding:0 15px;
+    color:rgb(0, 0, 0);
+    font-size:20px;
+    line-height: 60px;
+    text-decoration:none;
+}
+
+/* изменяем цвет фона при наведении курсора */
+nav a:hover {
+    background-color: #9c69df;
+    border-radius: 5px;
+}
+
+/* скрываем выпадающие списки по умолчанию и задаем абсолютное позиционирование */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+/* отображаем выпадающий список при наведении */
+nav ul li:hover > ul {
+    display:inherit;
+    color: #ffffff;
+}
+
+/* первый уровень выпадающего списка */
+nav ul ul li {
+    min-width:170px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 25px;
+}
+
+.container h1{
+    text-align: center;
+
+}
+
+/* Full-width input fields */
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+input[type=submit]{ 
+    width: 50%;
+    height: 50px;
+    background: #4CAF50;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+
+.container form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 49%;
+    opacity: 0.9;
+    border-radius: 25px;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
