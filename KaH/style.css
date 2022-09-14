@@ -5,18 +5,12 @@ body
 
 .topbar {
     background-color: blueviolet;
-    /* position: fixed;
-    top: 0%;
-    right: 0%;
+    height: 50px;
     width: 105%;
-    height: 50px; */
+    position: relative;
+    top: -10px;
+    right: 10px;
 }
-
-
-
-
-
-
 
 /* задаем цвет фона для контейнера nav. */
 nav {
@@ -41,7 +35,7 @@ nav ul li {
 }
 
 /* стилизуем ссылки */
-nav a {
+nav tr th ul a {
     display:block;
     padding:0 15px;
     color:rgb(0, 0, 0);
@@ -51,10 +45,10 @@ nav a {
 }
 
 /* изменяем цвет фона при наведении курсора */
-nav a:hover {
+/* nav a:hover {
     background-color: #9c69df;
     border-radius: 5px;
-}
+} */
 
 /* скрываем выпадающие списки по умолчанию и задаем абсолютное позиционирование */
 nav ul ul {
@@ -66,7 +60,7 @@ nav ul ul {
 /* отображаем выпадающий список при наведении */
 nav ul li:hover > ul {
     display:inherit;
-    color: #ffffff;
+    color: #f50000;
 }
 
 /* первый уровень выпадающего списка */
@@ -75,6 +69,39 @@ nav ul ul li {
     float:none;
     display:list-item;
     position: relative;
+}
+
+.contentMenu {
+    background: rgb(255, 255, 255); /* Цвет фона */
+    padding: 5px; /* Поля вокруг текста */
+}
+
+.contentMenu a:hover {
+    color: #ffffff;
+    background-color: #9c69df;
+    border-radius: 5px;
+}
+
+
+.container {
+    position: absolute;
+    right: 10%;
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+    width: 90%;
+    background-color: rgb(143, 108, 170);
+    border-radius: 25px;
+}
+
+h1 {
+    text-align: left;
+}
+
+p {
+    text-align: left;
+    font-size: 13pt;
+    font-weight: 100;
+    line-height: 1.5;
 }
 
 
