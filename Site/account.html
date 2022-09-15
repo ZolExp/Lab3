@@ -22,6 +22,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 400px;
+        height: 50%;
         /* height: 200px; */
         background: white;
         border-radius: 25px;
@@ -80,8 +81,8 @@
     .signoutbtn {
         background-color: #920b0b;
         color: white;
-        position: relative;
-        left: 65%;
+        position: fixed;
+        left: 63%;
         top: 90%;
         /* transform: translate(-50%, 0); */
         padding: 15px, 18px;
@@ -111,8 +112,17 @@
     </head>
     <body>
         <div class="container">
+            <h1>Аккаунт</h1>
+            <hr>
             <form>
-                <h3>Ваш логин - </h3>
+                <h3>Добро пожаловать!</h3>
+                <form>
+                    <p> Имя: <?php echo $_POST['name']; ?>.</p>
+                    <p> Возраст: <?php echo $_POST['age']; ?> </p>
+                 </form>
+                Ваш логин - 
+                <br>
+                Ваш пароль - 
             </form>
             <br>
             <a href="signin.html"><button type="submit" class="signoutbtn">Выйти из аккаунта</button></a>
