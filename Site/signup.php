@@ -121,9 +121,9 @@
             <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
         
             <!-- <button type="submit" class="registerbtn">Sign up</button> -->
-            <a href="account.html"><button type="submit" class="registerbtn">Зарегистрироваться</button></a>
+            <a href="account.php"><button type="submit" class="registerbtn">Зарегистрироваться</button></a>
 
-            <p>У вас уже есть аккаунт? <a href="signin.html">Вход</a>.</p>
+            <p>У вас уже есть аккаунт? <a href="signin.php">Вход</a>.</p>
             </form>
         </div>
     </body>

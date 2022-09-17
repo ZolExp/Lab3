@@ -125,7 +125,7 @@
                 Ваш пароль - 
             </form>
             <br>
-            <a href="signin.html"><button type="submit" class="signoutbtn">Выйти из аккаунта</button></a>
+            <a href="signin.php"><button type="submit" class="signoutbtn">Выйти из аккаунта</button></a>
         </div>
     </body>
 </html>

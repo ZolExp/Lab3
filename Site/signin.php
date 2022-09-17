@@ -108,14 +108,14 @@
             <h1>Вход</h1>
             <hr>
 
-            <form action="account.html">
+            <form action="account.php">
                 <label for="email"><b>Email</b></label>
                 <input type="email" class = "email" placeholder="Введите Email" name="email" required>
                 <br>
                 <label for="psw"><b>Пароль</b></label>
                 <input type="password" class = "psw" placeholder="Введите пароль" name="psw" required>
 
-                <a href="signup.html"> <button type="submit" class="loginbtn" onclick="transfer();return false">Войти</button></a>
+                <a href="signup.php"> <button type="submit" class="loginbtn" onclick="transfer();return false">Войти</button></a>
 
                 <script>
                     // function transfer(){
@@ -129,7 +129,7 @@
                     }
                 </script> -->
 
-                <p>У вас ещё нет аккаунта? <a href="signup.html">Регистрация</a>.</p>
+                <p>У вас ещё нет аккаунта? <a href="signup.php">Регистрация</a>.</p>
             </form>
 
             <!-- <button type="submit" class="registerbtn">Sign up</button> -->
