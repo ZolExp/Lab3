@@ -111,17 +111,26 @@
             <h1>Регистрация</h1>
             <hr>
 
-            <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Введите Email" name="email" required>
+            <table>
+                <tr>
+                    <td> <label for="email"><b>Email</b></label> </td>
+                    <td> <input type="email" placeholder="Введите Email" name="email" required> </td>
+                </tr>
+                    <br>
+                <tr>
+                    <td> <label for="psw"><b>Пароль</b></label> </td>
+                    <td> <input type="password" placeholder="Введите пароль" name="psw" required> </td>
+                </tr>
+                    <br>
+                <tr>
+                    <td> <label for="psw-repeat"><b>Повторите пароль</b></label> </td>
+                    <td> <input type="password" placeholder="Повторите пароль" name="psw-repeat" required> </td>
+                </tr>
+            </table>
             <br>
-            <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder="Введите пароль" name="psw" required>
-            <br>
-            <label for="psw-repeat"><b>Повторите пароль</b></label>
-            <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
-        
+
             <!-- <button type="submit" class="registerbtn">Sign up</button> -->
-            <a href="account.php"><button type="submit" class="registerbtn">Зарегистрироваться</button></a>
+            <a href="signin.php"><button type="submit" class="registerbtn">Зарегистрироваться</button></a>
 
             <p>У вас уже есть аккаунт? <a href="signin.php">Вход</a>.</p>
             </form>
