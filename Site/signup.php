@@ -107,10 +107,9 @@
 
     <body>
         <div class="container">
-            <form>
+            <form action="data.php">
             <h1>Регистрация</h1>
             <hr>
-
             <table>
                 <tr>
                     <td> <label for="email"><b>Email</b></label> </td>

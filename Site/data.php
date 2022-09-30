@@ -1,4 +1,10 @@
-<form>
-   <p> Имя: <?php echo $_POST['name']; ?>.</p>
-   <p> Возраст: <?php echo $_POST['age']; ?> </p>
-</form>
+<?php
+      $dbhost = "localhost";
+      $dbuser = "root";
+      $dbpass = "";
+      $dbname = "accounts";
+      if (!$con = $connection = mysql_connect($dbhost, $dbuser, $dbpass, $dbname)
+      {
+         die("Connect not found!");
+      }
+?>

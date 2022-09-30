@@ -107,8 +107,7 @@
         <div class="container">
             <h1>Вход</h1>
             <hr>
-
-            <form action="account.php">
+            <form action="data.php">
                 <label for="email"><b>Email</b></label>
                 <input type="email" class = "email" placeholder="Введите Email" name="email" required>
                 <br>

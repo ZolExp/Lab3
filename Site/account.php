@@ -114,7 +114,7 @@
         <div class="container">
             <h1>Аккаунт</h1>
             <hr>
-            <form>
+            <form action="data.php">
                 <h3>Добро пожаловать!</h3>
                 <form>
                     <p> Имя: <?php echo $_POST['name']; ?>.</p>
