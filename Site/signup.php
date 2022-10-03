@@ -105,9 +105,11 @@
         </style>
     </head>
 
+
+
     <body>
         <div class="container">
-            <form action="data.php">
+            <form method="GET" action="reg.php">
             <h1>Регистрация</h1>
             <hr>
             <table>

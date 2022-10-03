@@ -117,12 +117,9 @@
             <form action="data.php">
                 <h3>Добро пожаловать!</h3>
                 <form>
-                    <p> Имя: <?php echo $_POST['name']; ?>.</p>
-                    <p> Возраст: <?php echo $_POST['age']; ?> </p>
+                    <p> Почта: <?php echo $_COOKIE['emal']; ?></p>
+                    <p> Пароль: <?php echo $_COOKIE["pass"]; ?> </p>
                  </form>
-                Ваш логин - 
-                <br>
-                Ваш пароль - 
             </form>
             <br>
             <a href="signin.php"><button type="submit" class="signoutbtn">Выйти из аккаунта</button></a>
