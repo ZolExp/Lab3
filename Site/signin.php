@@ -109,6 +109,8 @@
             <hr>
             <?php
                 print($_COOKIE['msg']);
+                setcookie('msg', '', time() + 60);
+                // unset($_COOKIE['msg']);
             ?>
             <form method="GET" action="auth.php">
                 <label for="email"><b>Email</b></label>
@@ -119,41 +121,8 @@
 
                 <a href="signup.php"> <button type="submit" class="loginbtn" name="loginbtn" onclick="transfer();return false">Войти</button></a>
 
-                <script>
-                    // function transfer(){
-                    //     var a = forma
-                    // }
-                </script>
-
-                <!-- <script src="script.js">
-                    function opnAc() {
-                        document.location.href='account.html';
-                    }
-                </script> -->
-
                 <p>У вас ещё нет аккаунта? <a href="signup.php">Регистрация</a>.</p>
             </form>
-
-            <!-- <button type="submit" class="registerbtn">Sign up</button> -->
-
-            <!-- <script src="script.js">
-                function opnAc() {
-                    document.location.href='account.html';
-                }
-                // email = document.querySelector('.email');
-                // psw = document.querySelector('.psw');
-                // btn = document.querySelector('.btn');
-                // btn.setAttrebute('disable', true);
-                // inp.oninput = function() {
-                //     if(psw.value.length < 5) {
-                //         btn.setAttrebute('disable', true);
-                //     } else {
-                //         btn.removeAttrebute('disable');
-                //     }
-                //}
-            </script> -->
-
-          
         </div>
     </body>
 </html>

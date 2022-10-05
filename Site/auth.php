@@ -31,6 +31,10 @@ else
       $msg = 'Вы ввели неверный пароль!';
       setcookie("msg", $msg);
       mysqli_close($conn);
+      // echo 'Вы ввели неверный пароль!';
+
+      // sleep(5);
+
       header("Location: signin.php", true, 303);
 }
 
