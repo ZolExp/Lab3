@@ -107,7 +107,7 @@
 
     <body>
         <div class="container">
-            <form method="GET" action="reg.php">
+            <form method="POST" action="reg.php">
             <h1>Регистрация</h1>
             <hr>
             <table>

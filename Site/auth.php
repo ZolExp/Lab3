@@ -6,8 +6,8 @@ if (!$conn)
       print('Connect not found!'.mysqli_error());
 }
 
-$email = $_GET['email'];
-$password = $_GET['psw'];
+$email = $_POST['email'];
+$password = md5($_POST['psw']);
 
 setcookie("emal", $email);
 setcookie("pass", $password);

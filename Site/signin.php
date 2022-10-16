@@ -112,7 +112,7 @@
                 setcookie('msg', '', time() + 60);
                 // unset($_COOKIE['msg']);
             ?>
-            <form method="GET" action="auth.php">
+            <form method="POST" action="auth.php">
                 <label for="email"><b>Email</b></label>
                 <input type="email" class = "email" placeholder="Введите Email" name="email" required>
                 <br>
