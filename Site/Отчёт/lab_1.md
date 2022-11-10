@@ -46,3 +46,49 @@
 Регистрация нового пользователя![signup.jpg](signup.jpg)
 
 #### Программный код, реализующий систему
+
+##### Код реализации авторизации
+if($row['password'] == '')
+{
+      echo 'Вы не зарегистрированы!';
+}
+
+if (!strcmp($row['password'], $password))
+{
+      mysqli_close($conn);
+      header("Location: account.php", true, 303);
+}
+else
+{
+      $msg = 'Вы ввели неверный пароль!';
+      setcookie("msg", $msg);
+      mysqli_close($conn);
+      // echo 'Вы ввели неверный пароль!';
+
+      // sleep(5);
+
+      header("Location: signin.php", true, 303);
+}
+
+##### Код реализации регистрации
+if (!$conn)
+{
+      print('Connect not found!'.mysqli_error());
+}
+
+$email = $_POST['email'];
+$password = md5($_POST['psw']);
+
+$query = "INSERT INTO users (id, email, password) VALUES (NULL, '$email', '$password')";
+$test = mysqli_query($conn, $query);
+if($test == true)
+{
+      $msg = 'Вы успешно зарегистрировались!';
+      setcookie("msg", $msg);
+      mysqli_close($conn);
+      header("Location: signin.php", true, 303);
+}
+else
+{
+      echo 'Проблема!!!!!!!!!!!';
+}
