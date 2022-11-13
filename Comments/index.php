@@ -16,19 +16,23 @@
         <h1>Добро пожаловать в ленту комментариев</h1>
         <?php
             echo "<form method='POST' action='".setComments($conn)."'>
-            <input type ='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
-            <a>Title:</a><div>
-            <textarea name='title'></textarea>
-            <div>
-            <a>Your message:</a><div>
-            <textarea name='message'></textarea>
-            <div>
-            <button type='submit' name='commentSubmit'>Комментировать</button>
-            </form>";
+                <input type ='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+                <div class='title'><a>Заголовок:</a></div>
+                <div>
+                <textarea name='title'></textarea>
+                <div>
+                <div class='message'><a>Ваше сообщение:</a></div>
+                <div>
+                <textarea name='message'></textarea>
+                <div>
+                <a href='index.php'><button class='commbtn' type='submit' name='commentSubmit'>Комментировать</button></a>
+                <br><br>
+                </form>";
 
             getComments($conn);
 
         ?>
+        <br><br><br>
     </div>
 
 </body>
