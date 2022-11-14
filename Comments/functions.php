@@ -31,14 +31,16 @@ function getComments($conn) {
     }
 }
 
-function likeSubmit($message) {    
+function likeSubmit($row) {    
     require("connection.php");
     if(isset($_POST['likeSubmit'])) {
-    $id = $message['message_id'];
-    $likes = $message['likes']+1;
-    $query = "UPDATE messages SET likes = $likes WHERE message_id = $id";
-    $result = mysqli_query($con, $query);
+        $id = $row['id'];
+        $likes = $row['likes']+1;
+        $query = "SELECT * FROM comments WHERE id = '$id' limit 1";
+        $message = mysqli_query($conn, $query);
+        if (mysqli_num_rows($message) != 0) {
+            $query = "UPDATE comments SET likes = '$likes' WHERE id = '$id'";
+            $result = mysqli_query($conn, $query);
+        }
     }
 }
-
-?>
