@@ -10,10 +10,12 @@
 <head>
     <title>Комментарии</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
 </head>
 <body>
     <div class="container">
         <h1>Добро пожаловать в ленту комментариев</h1>
+        
         <?php
             echo "<form method='POST' action='".setComments($conn)."'>
                 <input type ='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
@@ -28,6 +30,8 @@
                 <a href='index.php'><button class='commbtn' type='submit' name='commentSubmit'>Комментировать</button></a>
                 <br><br>
                 </form>";
+
+            
 
             getComments($conn);
 

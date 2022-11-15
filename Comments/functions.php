@@ -24,7 +24,7 @@ function getComments($conn) {
             ".$row['date']."<br>
             <div class='title'> ".$row['title']."<br> </div>
             ".$row['message']."
-            <div><br>   <form method='POST' action='".likeSubmit($row)."'> <button type='submit' name='likeSubmit' class='likebtn'>♡ Like</button>  Likes: ".$row["likes"]."</form></div>
+            <div><br><form method='POST' action='".likeSubmit($row)."'> <button type='submit' name='".$row['id']."' class='likebtn'>♡ Like</button>  Likes: ".$row["likes"]."</form></div>
             <br>
         </div>
         <br>";
@@ -33,14 +33,12 @@ function getComments($conn) {
 
 function likeSubmit($row) {    
     require("connection.php");
-    if(isset($_POST['likeSubmit'])) {
+    if(isset($_POST[$row['id']])) {
         $id = $row['id'];
         $likes = $row['likes']+1;
-        $query = "SELECT * FROM comments WHERE id = '$id' limit 1";
-        $message = mysqli_query($conn, $query);
-        if (mysqli_num_rows($message) != 0) {
-            $query = "UPDATE comments SET likes = '$likes' WHERE id = '$id'";
-            $result = mysqli_query($conn, $query);
-        }
+        $query = "UPDATE comments SET likes = '$likes' WHERE id = '$id'";
+        $result = mysqli_query($conn, $query);
+        header('Location: main.php');
+        exit;
     }
 }
