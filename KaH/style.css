@@ -44,6 +44,14 @@ nav tr th ul a {
     text-decoration:none;
 }
 
+th {
+    border: 1px solid grey;
+ }
+ /* границы ячеек тела таблицы */
+ td {
+    border: 1px solid grey;
+ }
+
 /* изменяем цвет фона при наведении курсора */
 /* nav a:hover {
     background-color: #9c69df;
