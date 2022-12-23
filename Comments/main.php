@@ -2,6 +2,7 @@
     date_default_timezone_set('Europe/Moscow');
     include 'connection.php';
     include 'functions.php';
+
 ?>
 
 
@@ -30,8 +31,6 @@
                 <a href='index.php'><button class='commbtn' type='submit' name='commentSubmit'>Комментировать</button></a>
                 <br><br>
                 </form>";
-
-            
 
             getComments($conn);
 
