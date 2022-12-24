@@ -98,7 +98,7 @@ function getComments($conn) {
 }
 ```
 ### Реализация лайков к комментариям
-```
+```php
 function likeSubmit($row) {    
     require("connection.php");
     if(isset($_POST[$row['id']])) {
